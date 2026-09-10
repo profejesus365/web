@@ -12,7 +12,7 @@
 window.ENLACES = {
   proyectos: '',
   ejes: '',
-  examenes: '',
+  examenes: 'http://192.168.1.36:5001',
   gamificaciones: '',
   recursos: 'recursos/index.html',
 }

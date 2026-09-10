@@ -30,6 +30,9 @@
    La tarjeta se activa sola: cambia a color, muestra «Disponible» y aparece
    el botón «Entrar».
 
+   «Recursos Digitales» ya viene apuntando a la página que está incluida en
+   este mismo sitio (recursos/index.html). Las otras cuatro siguen libres.
+
    Para desactivar una sección otra vez, borra la dirección del «enlaces.txt»,
    guarda y vuelve a ejecutar «actualizar-enlaces.bat».
 
@@ -40,21 +43,65 @@
    aun así conviene ejecutarlo para que los dos archivos digan lo mismo.
 
 
-3. QUÉ HAY EN CADA ARCHIVO
+3. LA PÁGINA DE RECURSOS EDUCATIVOS DIGITALES
 -------------------------------------------------------------------------------
 
-   index.html ................ La página. Aquí están los textos.
-   enlaces.txt ............... LOS ENLACES. Es el archivo que vas a editar.
+   Está en «recursos/index.html» y reúne 23 plataformas repartidas en cinco
+   categorías. Lo que se puede hacer en ella:
+
+     · Buscar por nombre o por tema. No hace falta poner tildes: escribiendo
+       «matematicas» encuentra igual «matemáticas». Las coincidencias quedan
+       resaltadas dentro de las tarjetas.
+     · Filtrar por categoría con las fichas de colores. El número de cada
+       ficha dice cuántos resultados quedan en esa categoría.
+     · Guardar favoritos con la estrella de cada tarjeta. Se quedan grabados
+       en el navegador de quien visita, así que al volver siguen ahí. La
+       ficha «Favoritos» muestra solo esos.
+     · Pulsar la tecla  /  para saltar directamente al buscador.
+
+   PARA AÑADIR, QUITAR O CAMBIAR UN RECURSO
+   ----------------------------------------
+   Abre «js/recursos-datos.js» con el Bloc de notas. Dentro hay un bloque por
+   cada recurso, así:
+
+       {
+         cat: 'gamificacion',
+         nombre: 'Kahoot!',
+         sigla: 'K',
+         texto: 'Cuestionarios interactivos, encuestas y debates en tiempo real.',
+         url: 'https://kahoot.com/',
+         claves: 'concurso trivia preguntas competencia',
+       },
+
+   Copia un bloque entero, pégalo debajo y cambia los datos. Guarda y recarga
+   la página: aparece solo, en la categoría que le hayas puesto. Aquí no hace
+   falta ejecutar ningún .bat.
+
+   El archivo empieza con las instrucciones completas de cada campo.
+
+
+4. QUÉ HAY EN CADA ARCHIVO
+-------------------------------------------------------------------------------
+
+   index.html ................ La página de inicio. Aquí están los textos.
+   enlaces.txt ............... LOS ENLACES. Es uno de los archivos que editas.
    actualizar-enlaces.bat .... Aplica los cambios de enlaces.txt a la página.
    enlaces.js ................ Copia automática de enlaces.txt. NO se edita.
-   estilos/base.css .......... Colores, tipografía y medidas.
-   estilos/componentes.css ... Aspecto de cabecera, tarjetas, panel y pie.
-   js/principal.js ........... Tema claro/oscuro, menú móvil y carga de enlaces.
+
+   recursos/index.html ....... La página de Recursos Educativos Digitales.
+   js/recursos-datos.js ...... EL CATÁLOGO. El otro archivo que editas tú.
+   js/recursos.js ............ Buscador, filtros y favoritos del catálogo.
+   estilos/recursos.css ...... Aspecto propio de la página de recursos.
+
+   estilos/base.css .......... Colores, tipografía y medidas de todo el sitio.
+   estilos/componentes.css ... Cabecera, tarjetas, panel de servicios y pie.
+   js/comun.js ............... Tema claro/oscuro y menú móvil, en las dos páginas.
+   js/principal.js ........... Enlaces y navegación de la página de inicio.
    img/ ...................... Las imágenes del avatar.
    herramientas/ ............. El programa que usa el .bat. No hay que tocarlo.
 
 
-4. CAMBIOS FRECUENTES
+5. CAMBIOS FRECUENTES
 -------------------------------------------------------------------------------
 
    Cambiar un texto, un título o una descripción:
@@ -62,8 +109,8 @@
        aparece en la página. Cámbialo y guarda.
 
    Cambiar el correo o el WhatsApp:
-       En «index.html», busca «profejesus365» y «573003813984». Aparecen dos
-       veces cada uno: en el panel de servicios y en el pie de página.
+       Busca «profejesus365» y «573003813984». Aparecen en «index.html»
+       (panel de servicios y pie) y en «recursos/index.html» (pie).
 
    Cambiar la foto del avatar:
        Reemplaza los archivos de la carpeta «img/» conservando los mismos
@@ -72,10 +119,14 @@
    Cambiar los colores:
        En «estilos/base.css», al principio, están las variables --marca
        (azul institucional) y --acento (terracota). Cambiando esos dos
-       valores cambia el color de todo el sitio.
+       valores cambia el color de todo el sitio, las dos páginas incluidas.
+
+   Cambiar el color de una categoría de recursos:
+       En «estilos/recursos.css», al principio, cada categoría tiene su
+       propio tono para el modo claro y para el oscuro.
 
 
-5. SI QUIERES PUBLICARLO EN INTERNET
+6. SI QUIERES PUBLICARLO EN INTERNET
 -------------------------------------------------------------------------------
 
    El sitio es estático: no necesita servidor ni base de datos. Sube toda la
