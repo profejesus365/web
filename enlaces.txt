@@ -1,0 +1,46 @@
+# =============================================================================
+#   ENLACES DE LAS SECCIONES
+#   Sitio de Mgtr. Jesús Álvarez Sáez
+# =============================================================================
+#
+#   Este es el ÚNICO archivo que hay que tocar para que los botones de la
+#   página lleven a alguna parte. No hace falta abrir el código.
+#
+#   CÓMO SE USA
+#   -----------
+#   1. Pega la dirección después del signo  =  de la sección que corresponda.
+#   2. Guarda este archivo (Ctrl+S).
+#   3. Haz doble clic en «actualizar-enlaces.bat», en esta misma carpeta.
+#   4. Vuelve al navegador y recarga la página con Ctrl+F5.
+#
+#   Mientras una línea quede vacía, esa tarjeta se ve en gris con la etiqueta
+#   «Próximamente» y no lleva a ninguna parte. En cuanto le pongas dirección,
+#   la tarjeta se activa sola y pasa a mostrar «Disponible».
+#
+#   EJEMPLOS DE DIRECCIÓN VÁLIDA
+#   ----------------------------
+#   proyectos = https://sites.google.com/view/mis-proyectos
+#   examenes  = https://forms.gle/AbCdEfGhIj
+#   recursos  = recursos/index.html      (una carpeta dentro de este sitio)
+#
+#   Todas las líneas que empiezan por  #  son comentarios: no se leen.
+#   No cambies el nombre que va antes del  =  (proyectos, ejes, examenes,
+#   gamificaciones, recursos): así es como la página reconoce cada tarjeta.
+#
+# =============================================================================
+
+
+# --- Mis proyectos -----------------------------------------------------------
+proyectos =
+
+# --- Ejes temáticos ----------------------------------------------------------
+ejes =
+
+# --- Exámenes ----------------------------------------------------------------
+examenes =
+
+# --- Gamificaciones ----------------------------------------------------------
+gamificaciones =
+
+# --- Recursos Digitales ------------------------------------------------------
+recursos = recursos/index.html

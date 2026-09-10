@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Catálogo de recursos educativos digitales seleccionados para el aula: evaluación y gamificación, creación de contenidos, programación, práctica académica y lectura."
+    />
+    <meta name="author" content="Mgtr. Jesús Álvarez Sáez" />
+    <link rel="icon" type="image/png" href="../img/avatar-64.png" />
+    <title>Recursos Educativos Digitales · Mgtr. Jesús Álvarez Sáez</title>
+
+    <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/componentes.css" />
+    <link rel="stylesheet" href="../estilos/recursos.css" />
+
+    <script>
+      // Se aplica el tema antes de pintar para evitar el destello de color al cargar.
+      ;(function () {
+        try {
+          var t = localStorage.getItem('tema')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'
+          document.documentElement.dataset.tema = t
+        } catch (e) {
+          document.documentElement.dataset.tema = 'claro'
+        }
+      })()
+    </script>
+  </head>
+
+  <body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <!-- ====================================================================
+         Colección de iconos. No se dibuja: solo sirve de origen para los
+         <use> que aparecen más abajo y en las tarjetas generadas.
+         ==================================================================== -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="ic-gamificacion" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 4.5h10v4a5 5 0 0 1-10 0v-4Z" />
+          <path d="M17 5.5h2.5a.5.5 0 0 1 .5.5v1a3 3 0 0 1-3 3" />
+          <path d="M7 5.5H4.5a.5.5 0 0 0-.5.5v1a3 3 0 0 0 3 3" />
+          <path d="M12 13.5V17" />
+          <path d="M8.5 20.5h7l-.7-2.2a1 1 0 0 0-.95-.8h-3.7a1 1 0 0 0-.95.8l-.7 2.2Z" />
+        </g>
+      </symbol>
+
+      <symbol id="ic-creacion" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13.8 4.6 4.4 14a1.5 1.5 0 0 0-.4.75L3.2 19a.6.6 0 0 0 .7.7l4.25-.8a1.5 1.5 0 0 0 .75-.4l9.4-9.4-4.5-4.5Z" />
+          <path d="m13.8 4.6 1.9-1.9a1.6 1.6 0 0 1 2.3 0l2.2 2.2a1.6 1.6 0 0 1 0 2.3l-1.9 1.9" />
+          <path d="m12.3 6.1 4.5 4.5" />
+        </g>
+      </symbol>
+
+      <symbol id="ic-logica" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m8.5 8-4 4 4 4" />
+          <path d="m15.5 8 4 4-4 4" />
+          <path d="m13.2 5.5-2.4 13" />
+        </g>
+      </symbol>
+
+      <symbol id="ic-practica" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4.5" y="3" width="15" height="18" rx="2" />
+          <path d="M8 7.5h8" />
+          <path d="M8.5 12h2M13.5 12h2M8.5 16.5h2M13.5 16.5h2" />
+        </g>
+      </symbol>
+
+      <symbol id="ic-lectura" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H5.5A1.5 1.5 0 0 1 4 15.5v-10Z" />
+          <path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H14a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h4.5a1.5 1.5 0 0 0 1.5-1.5v-10Z" />
+        </g>
+      </symbol>
+
+      <symbol id="ic-estrella" viewBox="0 0 24 24">
+        <path
+          d="M12 3.4l2.32 5.02 5.43.66-4.02 3.76 1.06 5.5L12 15.6l-4.79 2.74 1.06-5.5-4.02-3.76 5.43-.66L12 3.4Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="ic-externo" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 5.5h9.5V15" />
+          <path d="M18.5 5.5 6 18" />
+        </g>
+      </symbol>
+    </svg>
+
+    <!-- ====================================================================
+         Cabecera
+         ==================================================================== -->
+    <header class="cabecera">
+      <div class="envoltura cabecera__interior">
+        <a class="marca" href="../index.html" aria-label="Volver al inicio">
+          <picture>
+            <source srcset="../img/avatar-retrato.webp" type="image/webp" />
+            <img class="marca__sello" src="../img/avatar-retrato.png" alt="" width="34" height="34" />
+          </picture>
+          <span class="marca__texto">
+            <span class="marca__titulo">Jesús Álvarez Sáez</span>
+            <span class="marca__sede">Docente · Lengua Castellana</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav__enlace" href="../index.html">Inicio</a>
+          <a class="nav__enlace" href="../index.html#secciones">Secciones</a>
+          <a class="nav__enlace" href="./index.html" aria-current="page">Recursos</a>
+          <a class="nav__enlace" href="../index.html#servicios">Servicios</a>
+          <button
+            class="interruptor-tema"
+            id="interruptor-tema"
+            type="button"
+            aria-pressed="false"
+            title="Cambiar de tema"
+          >
+            <span class="interruptor-tema__icono" id="icono-tema"></span>
+            <span id="etiqueta-tema">Claro</span>
+          </button>
+        </nav>
+
+        <div class="nav-movil">
+          <button
+            class="interruptor-tema"
+            id="interruptor-tema-movil"
+            type="button"
+            aria-pressed="false"
+            title="Cambiar de tema"
+          >
+            <span class="interruptor-tema__icono" id="icono-tema-movil"></span>
+          </button>
+          <button
+            class="boton-icono"
+            id="boton-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-movil"
+            aria-label="Abrir menú"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-desplegable" id="menu-movil" data-abierto="no" aria-label="Navegación principal">
+        <a class="nav__enlace" href="../index.html">Inicio</a>
+        <a class="nav__enlace" href="../index.html#secciones">Secciones</a>
+        <a class="nav__enlace" href="./index.html" aria-current="page">Recursos</a>
+        <a class="nav__enlace" href="../index.html#servicios">Servicios</a>
+      </nav>
+    </header>
+
+    <!-- ====================================================================
+         Portada
+         ==================================================================== -->
+    <section class="portada portada--interior">
+      <div class="envoltura portada__interior">
+        <div>
+          <a class="migas" href="../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M11 6l-6 6 6 6" />
+            </svg>
+            Volver al inicio
+          </a>
+          <p class="portada__antetitulo">Biblioteca de herramientas</p>
+          <h1>Recursos Educativos Digitales</h1>
+          <p class="portada__lema">
+            Plataformas probadas en el aula para evaluar, crear contenido, enseñar a programar,
+            reforzar contenidos y fomentar la lectura. Busca por nombre o por tema, filtra por
+            categoría y guarda con la estrella las que uses a diario.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Barra de herramientas: buscador y filtros
+         ==================================================================== -->
+    <div class="herramientas">
+      <div class="envoltura herramientas__interior">
+        <div class="campo-busqueda">
+          <svg class="campo-busqueda__icono" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m15.5 15.5 4 4" />
+          </svg>
+          <label class="solo-lectores" for="buscador">Buscar un recurso educativo</label>
+          <input
+            id="buscador"
+            type="search"
+            placeholder="Buscar por nombre o tema: Kahoot, matemáticas, lectura…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span class="campo-busqueda__atajo" id="atajo-busqueda">/</span>
+          <button class="campo-busqueda__limpiar" id="limpiar-busqueda" type="button" hidden aria-label="Borrar la búsqueda">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         Catálogo
+         ==================================================================== -->
+    <main id="contenido" class="envoltura pagina">
+      <p class="contador" id="contador" role="status" aria-live="polite"></p>
+
+      <div class="pila pila-xl" id="catalogo" style="margin-top: 1.5rem"></div>
+
+      <div class="vacio" id="vacio" hidden>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m15.5 15.5 4 4" />
+        </svg>
+        <h2>Sin resultados</h2>
+        <p id="vacio-texto">No hay recursos que coincidan con lo que buscas.</p>
+        <button class="boton boton--contorno boton--pequeno" id="vacio-limpiar" type="button">
+          Quitar los filtros
+        </button>
+      </div>
+
+      <noscript>
+        <div class="vacio" style="margin-top: 1.5rem">
+          <h2>Activa JavaScript</h2>
+          <p>El catálogo se arma en el navegador. Sin JavaScript no puede mostrarse.</p>
+        </div>
+      </noscript>
+
+      <p class="aviso-externo" style="margin-top: 2.5rem">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 11v5.5M12 7.8v.4" />
+        </svg>
+        <span>
+          Todos los recursos abren en una pestaña nueva y pertenecen a sus respectivos autores.
+          Esta página solo los reúne y organiza; conviene revisar las condiciones de uso de cada
+          plataforma antes de trabajar con estudiantes.
+        </span>
+      </p>
+    </main>
+
+    <!-- ====================================================================
+         Pie
+         ==================================================================== -->
+    <footer class="pie">
+      <div class="envoltura">
+        <div class="pie__interior">
+          <div>
+            <p class="pie__titulo">Docente</p>
+            <p class="pie__nombre">Mgtr. Jesús Álvarez Sáez</p>
+            <p class="guia" style="margin-top: 0.25rem">
+              Lengua Castellana · Básica primaria<br />
+              Cesar, Colombia
+            </p>
+          </div>
+
+          <nav aria-label="Secciones">
+            <p class="pie__titulo">Ir a</p>
+            <ul class="pie__lista">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../index.html#secciones">Todas las secciones</a></li>
+              <li><a href="../index.html#servicios">Servicios para docentes</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <p class="pie__titulo">Contacto</p>
+            <ul class="pie__lista">
+              <li><a href="mailto:profejesus365@gmail.com">profejesus365@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/573003813984" target="_blank" rel="noopener noreferrer">
+                  WhatsApp +57 300 381 3984
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pie__credito">
+          <p>Sitio de uso pedagógico · <span id="anio">2026</span></p>
+          <p>Diseñado y mantenido por <strong>Mgtr. Jesús Álvarez Sáez</strong></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/comun.js"></script>
+    <script src="../js/recursos-datos.js"></script>
+    <script src="../js/recursos.js"></script>
+  </body>
+</html>

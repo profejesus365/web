@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Sitio profesional del Mgtr. Jesús Álvarez Sáez, docente de Lengua Castellana. Proyectos, ejes temáticos, exámenes, gamificaciones y recursos digitales para el aula."
+    />
+    <meta name="author" content="Mgtr. Jesús Álvarez Sáez" />
+    <link rel="icon" type="image/png" href="./img/avatar-64.png" />
+    <title>Mgtr. Jesús Álvarez Sáez · Docente</title>
+
+    <link rel="stylesheet" href="./estilos/base.css" />
+    <link rel="stylesheet" href="./estilos/componentes.css" />
+
+    <script>
+      // Se aplica el tema antes de pintar para evitar el destello de color al cargar.
+      ;(function () {
+        try {
+          var t = localStorage.getItem('tema')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'
+          document.documentElement.dataset.tema = t
+        } catch (e) {
+          document.documentElement.dataset.tema = 'claro'
+        }
+      })()
+    </script>
+  </head>
+
+  <body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <!-- ====================================================================
+         Cabecera
+         ==================================================================== -->
+    <header class="cabecera">
+      <div class="envoltura cabecera__interior">
+        <a class="marca" href="#inicio" aria-label="Inicio">
+          <picture>
+            <source srcset="./img/avatar-retrato.webp" type="image/webp" />
+            <img
+              class="marca__sello"
+              src="./img/avatar-retrato.png"
+              alt=""
+              width="34"
+              height="34"
+            />
+          </picture>
+          <span class="marca__texto">
+            <span class="marca__titulo">Jesús Álvarez Sáez</span>
+            <span class="marca__sede">Docente · Lengua Castellana</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav__enlace" href="#inicio">Inicio</a>
+          <a class="nav__enlace" href="#secciones">Secciones</a>
+          <a class="nav__enlace" href="#perfil">Perfil</a>
+          <a class="nav__enlace" href="#servicios">Servicios</a>
+          <a class="nav__enlace" href="#contacto">Contacto</a>
+          <button
+            class="interruptor-tema"
+            id="interruptor-tema"
+            type="button"
+            aria-pressed="false"
+            title="Cambiar de tema"
+          >
+            <span class="interruptor-tema__icono" id="icono-tema"></span>
+            <span id="etiqueta-tema">Claro</span>
+          </button>
+        </nav>
+
+        <div class="nav-movil">
+          <button
+            class="interruptor-tema"
+            id="interruptor-tema-movil"
+            type="button"
+            aria-pressed="false"
+            title="Cambiar de tema"
+          >
+            <span class="interruptor-tema__icono" id="icono-tema-movil"></span>
+          </button>
+          <button
+            class="boton-icono"
+            id="boton-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-movil"
+            aria-label="Abrir menú"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        class="nav-desplegable"
+        id="menu-movil"
+        data-abierto="no"
+        aria-label="Navegación principal"
+      >
+        <a class="nav__enlace" href="#inicio">Inicio</a>
+        <a class="nav__enlace" href="#secciones">Secciones</a>
+        <a class="nav__enlace" href="#perfil">Perfil</a>
+        <a class="nav__enlace" href="#servicios">Servicios</a>
+        <a class="nav__enlace" href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- ==================================================================
+           Portada
+           ================================================================== -->
+      <section class="portada" id="inicio">
+        <div class="envoltura portada__interior">
+          <div>
+            <p class="portada__antetitulo">Docencia y tecnología educativa</p>
+            <h1>Mgtr. Jesús Álvarez Sáez</h1>
+            <p class="portada__cargo">Docente de Lengua Castellana</p>
+            <p class="portada__lema">
+              Espacio de trabajo donde reúno mis proyectos de aula, los ejes temáticos del área,
+              los exámenes, las experiencias de gamificación y los recursos digitales que diseño
+              para mis clases de básica primaria.
+            </p>
+
+            <div class="portada__acciones">
+              <a class="boton boton--principal" href="#secciones">
+                Explorar las secciones
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="boton boton--contorno" href="#servicios">Servicios para docentes</a>
+            </div>
+
+            <div class="portada__sello-lista">
+              <span class="distintivo distintivo--neutro">Básica primaria</span>
+              <span class="distintivo distintivo--neutro">Aula gamificada</span>
+              <span class="distintivo distintivo--neutro">Herramientas a la medida</span>
+            </div>
+          </div>
+
+          <figure class="portada__figura">
+            <picture>
+              <source srcset="./img/avatar-hero.webp" type="image/webp" />
+              <img
+                class="portada__avatar"
+                src="./img/avatar-hero.png"
+                alt="Avatar del Mgtr. Jesús Álvarez Sáez, docente de Lengua Castellana"
+                width="300"
+                height="489"
+              />
+            </picture>
+            <figcaption class="portada__credencial">Mgtr. Jesús Álvarez Sáez</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="envoltura pagina pila pila-xl">
+        <!-- ================================================================
+             Secciones — los cinco accesos.
+             El destino de cada uno se define en enlaces.txt; mientras esté
+             vacío la tarjeta se muestra como «Próximamente» y no navega.
+             ================================================================ -->
+        <section id="secciones" aria-labelledby="t-secciones">
+          <div class="seccion__cabeza">
+            <div>
+              <h2 id="t-secciones">Secciones del sitio</h2>
+              <p class="guia">
+                Cada acceso abre un espacio de trabajo independiente del área.
+              </p>
+            </div>
+          </div>
+
+          <div class="rejilla rejilla--3">
+            <!-- Mis proyectos -->
+            <a class="acceso" data-enlace="proyectos" data-estado="pendiente">
+              <span class="acceso__icono" aria-hidden="true">
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z" />
+                  <path d="m3 12.5 9 4.5 9-4.5" />
+                  <path d="m3 17 9 4.5 9-4.5" />
+                </svg>
+              </span>
+              <span class="acceso__nombre">Mis proyectos</span>
+              <span class="acceso__texto">
+                Proyectos pedagógicos y de aula en desarrollo, con sus productos y evidencias.
+              </span>
+              <span class="acceso__pie">
+                <span class="distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+                <span class="acceso__ir">
+                  Entrar
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <!-- Ejes temáticos -->
+            <a class="acceso" data-enlace="ejes" data-estado="pendiente">
+              <span class="acceso__icono" aria-hidden="true">
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="9" y="2.5" width="6" height="5" rx="1.2" />
+                  <rect x="2.5" y="16.5" width="6" height="5" rx="1.2" />
+                  <rect x="15.5" y="16.5" width="6" height="5" rx="1.2" />
+                  <path d="M12 7.5v4.5M5.5 16.5V12h13v4.5" />
+                </svg>
+              </span>
+              <span class="acceso__nombre">Ejes temáticos</span>
+              <span class="acceso__texto">
+                Organización de los contenidos del área por grado, periodo y factor.
+              </span>
+              <span class="acceso__pie">
+                <span class="distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+                <span class="acceso__ir">
+                  Entrar
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <!-- Exámenes -->
+            <a class="acceso" data-enlace="examenes" data-estado="pendiente">
+              <span class="acceso__icono" aria-hidden="true">
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M8 3.5h8a1 1 0 0 1 1 1V6H7V4.5a1 1 0 0 1 1-1Z" />
+                  <path d="M17 5h1.5a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 18.5 21h-13A1.5 1.5 0 0 1 4 19.5v-13A1.5 1.5 0 0 1 5.5 5H7" />
+                  <path d="m8.5 12.5 2 2 4.5-4.5" />
+                  <path d="M8.5 18h7" />
+                </svg>
+              </span>
+              <span class="acceso__nombre">Exámenes</span>
+              <span class="acceso__texto">
+                Pruebas, evaluaciones y bancos de preguntas para aplicar y calificar.
+              </span>
+              <span class="acceso__pie">
+                <span class="distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+                <span class="acceso__ir">
+                  Entrar
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <!-- Gamificaciones -->
+            <a class="acceso" data-enlace="gamificaciones" data-estado="pendiente">
+              <span class="acceso__icono" aria-hidden="true">
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 4.5h10v4a5 5 0 0 1-10 0v-4Z" />
+                  <path d="M17 5.5h2.5a.5.5 0 0 1 .5.5v1a3 3 0 0 1-3 3" />
+                  <path d="M7 5.5H4.5a.5.5 0 0 0-.5.5v1a3 3 0 0 0 3 3" />
+                  <path d="M12 13.5V17" />
+                  <path d="M8.5 20.5h7l-.7-2.2a1 1 0 0 0-.95-.8h-3.7a1 1 0 0 0-.95.8l-.7 2.2Z" />
+                </svg>
+              </span>
+              <span class="acceso__nombre">Gamificaciones</span>
+              <span class="acceso__texto">
+                Retos, misiones y sistemas de puntos que convierten la clase en un juego.
+              </span>
+              <span class="acceso__pie">
+                <span class="distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+                <span class="acceso__ir">
+                  Entrar
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+
+            <!-- Recursos Digitales -->
+            <a class="acceso" data-enlace="recursos" data-estado="pendiente">
+              <span class="acceso__icono" aria-hidden="true">
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 18.5h10a4 4 0 0 0 .6-7.95 5.5 5.5 0 0 0-10.7-1.2A3.75 3.75 0 0 0 7 18.5Z" />
+                  <path d="M12 10.5v5" />
+                  <path d="m9.8 13.3 2.2 2.2 2.2-2.2" />
+                </svg>
+              </span>
+              <span class="acceso__nombre">Recursos Digitales</span>
+              <span class="acceso__texto">
+                Programas, aplicaciones, plantillas y material de apoyo listos para descargar.
+              </span>
+              <span class="acceso__pie">
+                <span class="distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+                <span class="acceso__ir">
+                  Entrar
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             Servicios — la invitación a contactar
+             ================================================================ -->
+        <section id="servicios" aria-labelledby="t-servicios">
+          <div class="panel-servicios">
+            <p class="panel-servicios__antetitulo">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3l2.4 5.2 5.6.7-4.2 3.9 1.1 5.7L12 15.8 7.1 18.5l1.1-5.7L4 8.9l5.6-.7L12 3Z" />
+              </svg>
+              Para docentes e instituciones
+            </p>
+
+            <h2 id="t-servicios">¿Quieres gamificar tu aula?</h2>
+
+            <p class="panel-servicios__texto">
+              Si eres docente y buscas que tus clases dejen de ser rutina, puedo acompañarte.
+              Diseño experiencias de aula gamificadas y desarrollo herramientas a la medida:
+              programas para PC y aplicaciones móviles que se ocupan del trabajo repetitivo,
+              para que tú te concentres en enseñar.
+            </p>
+
+            <ul class="panel-servicios__lista">
+              <li>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7" />
+                </svg>
+                Gamificación de aula: retos, niveles, insignias y tableros de progreso
+              </li>
+              <li>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7" />
+                </svg>
+                Registro de notas y cálculo automático de promedios
+              </li>
+              <li>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7" />
+                </svg>
+                Control de asistencia diario, por grupo y por periodo
+              </li>
+              <li>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7" />
+                </svg>
+                Generación de boletines, informes y reportes institucionales
+              </li>
+              <li>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7" />
+                </svg>
+                Programas de escritorio y aplicaciones móviles a la medida
+              </li>
+              <li>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7" />
+                </svg>
+                Acompañamiento y capacitación para el equipo docente
+              </li>
+            </ul>
+
+            <p class="guia" style="margin-top: 1.5rem">
+              Escríbeme y conversamos sobre lo que tu aula o tu institución necesita.
+            </p>
+
+            <div class="panel-servicios__contacto" id="contacto">
+              <a class="boton boton--wasap" href="https://wa.me/573003813984" target="_blank" rel="noopener noreferrer">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.47 2 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.16-1.14l-.3-.18-3.1.81.83-3.02-.2-.31a8.13 8.13 0 0 1-1.25-4.34c0-4.51 3.68-8.18 8.2-8.18 2.19 0 4.24.85 5.79 2.4a8.12 8.12 0 0 1 2.4 5.79c0 4.51-3.68 8.17-8.2 8.17Zm4.5-6.12c-.25-.13-1.46-.72-1.68-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.51c.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.07.14-1.17-.06-.11-.22-.17-.47-.29Z"
+                  />
+                </svg>
+                WhatsApp +57 300 381 3984
+              </a>
+              <a class="boton boton--contorno" href="mailto:profejesus365@gmail.com">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2.75" y="5" width="18.5" height="14" rx="2" />
+                  <path d="m3.5 6.5 8.5 6 8.5-6" />
+                </svg>
+                profejesus365@gmail.com
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             Perfil
+             ================================================================ -->
+        <section id="perfil" aria-labelledby="t-perfil">
+          <div class="seccion__cabeza">
+            <div>
+              <h2 id="t-perfil">Sobre este espacio</h2>
+              <p class="guia">Tres ideas que sostienen todo lo que encontrarás aquí.</p>
+            </div>
+          </div>
+
+          <div class="rejilla rejilla--3">
+            <article class="tarjeta nota">
+              <p class="nota__sello">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H5.5A1.5 1.5 0 0 1 4 15.5v-10Z" />
+                  <path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H14a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h4.5a1.5 1.5 0 0 0 1.5-1.5v-10Z" />
+                </svg>
+                Aula
+              </p>
+              <h3>Lengua Castellana en primaria</h3>
+              <p class="guia">
+                Todo el material nace del trabajo diario con estudiantes de básica primaria y se
+                organiza siguiendo los referentes del Ministerio de Educación Nacional: estándares
+                básicos de competencias y derechos básicos de aprendizaje.
+              </p>
+            </article>
+
+            <article class="tarjeta nota">
+              <p class="nota__sello" style="color: var(--acento)">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 3l2.4 5.2 5.6.7-4.2 3.9 1.1 5.7L12 15.8 7.1 18.5l1.1-5.7L4 8.9l5.6-.7L12 3Z" />
+                </svg>
+                Juego
+              </p>
+              <h3>Aprender jugando, en serio</h3>
+              <p class="guia">
+                La gamificación no es un adorno: es una forma de organizar la clase con reglas
+                claras, metas visibles y recompensas que sostienen la motivación durante todo el
+                periodo, sin perder el rigor académico.
+              </p>
+            </article>
+
+            <article class="tarjeta nota">
+              <p class="nota__sello">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="4" width="18" height="13" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                  <path d="m9 8.5-2 2 2 2M15 8.5l2 2-2 2" />
+                </svg>
+                Tecnología
+              </p>
+              <h3>Herramientas hechas para el docente</h3>
+              <p class="guia">
+                Los programas y aplicaciones que comparto se diseñan desde la práctica real:
+                resuelven las tareas administrativas que consumen tiempo —notas, asistencia,
+                reportes— y devuelven ese tiempo al aula.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         Pie
+         ==================================================================== -->
+    <footer class="pie">
+      <div class="envoltura">
+        <div class="pie__interior">
+          <div>
+            <p class="pie__titulo">Docente</p>
+            <p class="pie__nombre">Mgtr. Jesús Álvarez Sáez</p>
+            <p class="guia" style="margin-top: 0.25rem">
+              Lengua Castellana · Básica primaria<br />
+              Cesar, Colombia
+            </p>
+          </div>
+
+          <nav aria-label="Secciones">
+            <p class="pie__titulo">Secciones</p>
+            <ul class="pie__lista">
+              <li><a data-enlace-pie="proyectos" href="#secciones">Mis proyectos</a></li>
+              <li><a data-enlace-pie="ejes" href="#secciones">Ejes temáticos</a></li>
+              <li><a data-enlace-pie="examenes" href="#secciones">Exámenes</a></li>
+              <li><a data-enlace-pie="gamificaciones" href="#secciones">Gamificaciones</a></li>
+              <li><a data-enlace-pie="recursos" href="#secciones">Recursos Digitales</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <p class="pie__titulo">Contacto</p>
+            <ul class="pie__lista">
+              <li><a href="mailto:profejesus365@gmail.com">profejesus365@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/573003813984" target="_blank" rel="noopener noreferrer">
+                  WhatsApp +57 300 381 3984
+                </a>
+              </li>
+              <li><span>Gamificación de aula</span></li>
+              <li><span>Programas y apps educativas</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pie__credito">
+          <p>Sitio de uso pedagógico · <span id="anio">2026</span></p>
+          <p>Diseñado y mantenido por <strong>Mgtr. Jesús Álvarez Sáez</strong></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Respaldo de enlaces para cuando la página se abre con doble clic -->
+    <script src="./enlaces.js"></script>
+    <script src="./js/comun.js"></script>
+    <script src="./js/principal.js"></script>
+  </body>
+</html>

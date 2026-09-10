@@ -1,0 +1,93 @@
+===============================================================================
+  SITIO WEB  ·  Mgtr. Jesús Álvarez Sáez
+  Guía rápida de uso
+===============================================================================
+
+
+1. CÓMO VER LA PÁGINA
+-------------------------------------------------------------------------------
+
+   Haz doble clic en «index.html». Se abre en tu navegador. No necesitas
+   internet ni instalar nada.
+
+
+2. CÓMO PONERLE ENLACES A LAS CINCO SECCIONES
+-------------------------------------------------------------------------------
+
+   Las tarjetas «Mis proyectos», «Ejes temáticos», «Exámenes»,
+   «Gamificaciones» y «Recursos Digitales» empiezan sin destino: se ven en
+   gris, con la etiqueta «Próximamente», y no llevan a ninguna parte.
+
+   Para activarlas:
+
+     1) Abre «enlaces.txt» con el Bloc de notas.
+     2) Pega la dirección después del signo  =  de la sección que quieras.
+        Ejemplo:   proyectos = https://sites.google.com/view/mis-proyectos
+     3) Guarda el archivo (Ctrl+S).
+     4) Haz doble clic en «actualizar-enlaces.bat».
+     5) Vuelve al navegador y recarga con Ctrl+F5.
+
+   La tarjeta se activa sola: cambia a color, muestra «Disponible» y aparece
+   el botón «Entrar».
+
+   Para desactivar una sección otra vez, borra la dirección del «enlaces.txt»,
+   guarda y vuelve a ejecutar «actualizar-enlaces.bat».
+
+   NOTA: el paso 4 hace falta porque los navegadores no permiten que una
+   página abierta con doble clic lea un archivo .txt del disco. Ese .bat copia
+   los enlaces a «enlaces.js», que sí se puede leer. Si algún día publicas el
+   sitio en internet, el .txt se lee directo y el paso 4 deja de ser necesario;
+   aun así conviene ejecutarlo para que los dos archivos digan lo mismo.
+
+
+3. QUÉ HAY EN CADA ARCHIVO
+-------------------------------------------------------------------------------
+
+   index.html ................ La página. Aquí están los textos.
+   enlaces.txt ............... LOS ENLACES. Es el archivo que vas a editar.
+   actualizar-enlaces.bat .... Aplica los cambios de enlaces.txt a la página.
+   enlaces.js ................ Copia automática de enlaces.txt. NO se edita.
+   estilos/base.css .......... Colores, tipografía y medidas.
+   estilos/componentes.css ... Aspecto de cabecera, tarjetas, panel y pie.
+   js/principal.js ........... Tema claro/oscuro, menú móvil y carga de enlaces.
+   img/ ...................... Las imágenes del avatar.
+   herramientas/ ............. El programa que usa el .bat. No hay que tocarlo.
+
+
+4. CAMBIOS FRECUENTES
+-------------------------------------------------------------------------------
+
+   Cambiar un texto, un título o una descripción:
+       Abre «index.html» con el Bloc de notas y busca el texto tal cual
+       aparece en la página. Cámbialo y guarda.
+
+   Cambiar el correo o el WhatsApp:
+       En «index.html», busca «profejesus365» y «573003813984». Aparecen dos
+       veces cada uno: en el panel de servicios y en el pie de página.
+
+   Cambiar la foto del avatar:
+       Reemplaza los archivos de la carpeta «img/» conservando los mismos
+       nombres. Conviene mantener el fondo transparente.
+
+   Cambiar los colores:
+       En «estilos/base.css», al principio, están las variables --marca
+       (azul institucional) y --acento (terracota). Cambiando esos dos
+       valores cambia el color de todo el sitio.
+
+
+5. SI QUIERES PUBLICARLO EN INTERNET
+-------------------------------------------------------------------------------
+
+   El sitio es estático: no necesita servidor ni base de datos. Sube toda la
+   carpeta tal cual a cualquier servicio de alojamiento gratuito
+   (GitHub Pages, Netlify, Cloudflare Pages) y funcionará igual.
+
+   Los archivos «actualizar-enlaces.bat» y «herramientas/» son solo para tu
+   computador: puedes subirlos o no, da lo mismo.
+
+
+===============================================================================
+  El tema claro/oscuro se ajusta solo al de tu computador, y el visitante
+  puede cambiarlo con el botón de la esquina superior derecha. Su elección
+  queda guardada en su propio navegador.
+===============================================================================
