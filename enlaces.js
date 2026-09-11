@@ -13,6 +13,6 @@ window.ENLACES = {
   proyectos: '',
   ejes: '',
   examenes: 'http://192.168.1.4:5173/estudiante',
-  gamificaciones: '',
+  gamificaciones: 'https://profejesus365.github.io/code/',
   recursos: 'recursos/index.html',
 }
