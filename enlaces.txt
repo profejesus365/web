@@ -39,8 +39,8 @@ ejes =
 # --- Exámenes ----------------------------------------------------------------
 examenes = http://192.168.1.4:5173/estudiante
 
-# --- Gamificaciones ----------------------------------------------------------
-gamificaciones =
+# --- Perfil estudiante ----------------------------------------------------------
+perfil-estudiante = https://profejesus365.github.io/code/
 
 # --- Recursos Digitales ------------------------------------------------------
 recursos = recursos/index.html
