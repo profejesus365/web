@@ -3,7 +3,7 @@
    Sitio profesional · Mgtr. Jesús Álvarez Sáez
 
      1. Sección activa en la navegación.
-     2. Carga de los enlaces de las cinco secciones desde «enlaces.txt».
+     2. Carga de los enlaces de las seis secciones desde «enlaces.txt».
 
    El tema claro/oscuro, el menú móvil y el año del pie están en «comun.js»,
    que se carga antes que este archivo.
@@ -63,7 +63,7 @@
   }
 
   /* ========================================================================
-     2. Enlaces de las cinco secciones
+     2. Enlaces de las seis secciones
 
      El archivo «enlaces.txt», en la carpeta del sitio, es el que manda: allí
      se pega la dirección de cada sección sin tocar el código de la página.
@@ -73,7 +73,7 @@
      respaldo con los mismos valores. Al publicar el sitio en internet se lee
      directamente el .txt.
      ======================================================================== */
-  var CLAVES = ['proyectos', 'ejes', 'examenes', 'gamificaciones', 'recursos']
+  var CLAVES = ['portal', 'proyectos', 'ejes', 'examenes', 'gamificaciones', 'recursos']
 
   function leerRespaldo() {
     var base = {}

@@ -24,11 +24,15 @@
 #   recursos  = recursos/index.html      (una carpeta dentro de este sitio)
 #
 #   Todas las líneas que empiezan por  #  son comentarios: no se leen.
-#   No cambies el nombre que va antes del  =  (proyectos, ejes, examenes,
-#   gamificaciones, recursos): así es como la página reconoce cada tarjeta.
+#   No cambies el nombre que va antes del  =  (portal, proyectos, ejes,
+#   examenes, gamificaciones, recursos): así es como la página reconoce cada
+#   tarjeta.
 #
 # =============================================================================
 
+
+# --- Portal Estudiante ---------------------------------------------------------
+portal = https://profejesus365.github.io/code/
 
 # --- Mis proyectos -----------------------------------------------------------
 proyectos =
@@ -39,8 +43,8 @@ ejes =
 # --- Exámenes ----------------------------------------------------------------
 examenes = http://192.168.1.4:5173/estudiante
 
-# --- Gamificaciones ----------------------------------------------------------
-gamificaciones = https://profejesus365.github.io/code/
+# --- Gamificación --------------------------------------------------------------
+gamificacion =
 
 # --- Recursos Digitales ------------------------------------------------------
 recursos = recursos/index.html

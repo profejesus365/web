@@ -10,9 +10,10 @@
    funcionan igual sin necesidad de publicar el sitio.
    ========================================================================== */
 window.ENLACES = {
+  portal: 'https://profejesus365.github.io/code/',
   proyectos: '',
   ejes: '',
   examenes: 'http://192.168.1.4:5173/estudiante',
-  gamificaciones: 'https://profejesus365.github.io/code/',
+  gamificaciones: '',
   recursos: 'recursos/index.html',
 }

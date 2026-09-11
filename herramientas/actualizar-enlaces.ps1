@@ -22,13 +22,14 @@ if (-not (Test-Path -LiteralPath $rutaTxt)) {
     exit 1
 }
 
-# Las cinco secciones de la pagina, en el orden en que aparecen.
-$claves = @('proyectos', 'ejes', 'examenes', 'gamificaciones', 'recursos')
+# Las seis secciones de la pagina, en el orden en que aparecen.
+$claves = @('portal', 'proyectos', 'ejes', 'examenes', 'gamificaciones', 'recursos')
 $rotulos = @{
+    portal         = 'Portal Estudiante'
     proyectos      = 'Mis proyectos'
     ejes           = 'Ejes tematicos'
     examenes       = 'Examenes'
-    gamificaciones = 'Gamificaciones'
+    gamificaciones = 'Gamificacion'
     recursos       = 'Recursos Digitales'
 }
 

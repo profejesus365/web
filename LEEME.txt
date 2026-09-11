@@ -11,12 +11,12 @@
    internet ni instalar nada.
 
 
-2. CÓMO PONERLE ENLACES A LAS CINCO SECCIONES
+2. CÓMO PONERLE ENLACES A LAS SEIS SECCIONES
 -------------------------------------------------------------------------------
 
-   Las tarjetas «Mis proyectos», «Ejes temáticos», «Exámenes»,
-   «Gamificaciones» y «Recursos Digitales» empiezan sin destino: se ven en
-   gris, con la etiqueta «Próximamente», y no llevan a ninguna parte.
+   Las tarjetas «Portal Estudiante», «Mis proyectos», «Ejes temáticos»,
+   «Exámenes», «Gamificación» y «Recursos Digitales» empiezan sin destino: se
+   ven en gris, con la etiqueta «Próximamente», y no llevan a ninguna parte.
 
    Para activarlas:
 
@@ -31,7 +31,7 @@
    el botón «Entrar».
 
    «Recursos Digitales» ya viene apuntando a la página que está incluida en
-   este mismo sitio (recursos/index.html). Las otras cuatro siguen libres.
+   este mismo sitio (recursos/index.html). Las otras cinco siguen libres.
 
    Para desactivar una sección otra vez, borra la dirección del «enlaces.txt»,
    guarda y vuelve a ejecutar «actualizar-enlaces.bat».
