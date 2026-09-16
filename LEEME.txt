@@ -11,10 +11,10 @@
    internet ni instalar nada.
 
 
-2. CÓMO PONERLE ENLACES A LAS SEIS SECCIONES
+2. CÓMO PONERLE ENLACES A LAS SECCIONES
 -------------------------------------------------------------------------------
 
-   Las tarjetas «Portal Estudiante», «Mis proyectos», «Ejes temáticos»,
+   Las tarjetas «Academia CODE», «Mis proyectos», «Ejes temáticos»,
    «Exámenes», «Gamificación» y «Recursos Digitales» empiezan sin destino: se
    ven en gris, con la etiqueta «Próximamente», y no llevan a ninguna parte.
 
@@ -30,20 +30,48 @@
    La tarjeta se activa sola: cambia a color, muestra «Disponible» y aparece
    el botón «Entrar».
 
-   «Recursos Digitales» ya viene apuntando a la página que está incluida en
-   este mismo sitio (recursos/index.html). Las otras cinco siguen libres.
+   «Recursos Digitales» y «Academia CODE» ya vienen apuntando a páginas que
+   están incluidas en este mismo sitio (recursos/index.html y
+   academia-code/index.html). Las otras cuatro siguen libres.
 
    Para desactivar una sección otra vez, borra la dirección del «enlaces.txt»,
    guarda y vuelve a ejecutar «actualizar-enlaces.bat».
 
    NOTA: el paso 4 hace falta porque los navegadores no permiten que una
    página abierta con doble clic lea un archivo .txt del disco. Ese .bat copia
-   los enlaces a «enlaces.js», que sí se puede leer. Si algún día publicas el
-   sitio en internet, el .txt se lee directo y el paso 4 deja de ser necesario;
-   aun así conviene ejecutarlo para que los dos archivos digan lo mismo.
+   los enlaces a «enlaces.js» (y a «enlaces-academia.js», ver el punto 3), que
+   sí se pueden leer. Si algún día publicas el sitio en internet, los .txt se
+   leen directo y el paso 4 deja de ser necesario; aun así conviene ejecutarlo
+   para que todos los archivos digan lo mismo.
 
 
-3. LA PÁGINA DE RECURSOS EDUCATIVOS DIGITALES
+3. LA PÁGINA «ACADEMIA CODE»
+-------------------------------------------------------------------------------
+
+   Está en «academia-code/index.html» y cuenta, con la narrativa de una
+   misión de rescate, la historia que le da sentido a la sección: N.E.U.R.O.N.
+   ha tomado el servidor de la escuela y la Academia CODE forma «Hackers de la
+   Lengua» para liberarla.
+
+   Al final tiene dos botones: «Entrar desde la escuela» y «Entrar desde la
+   web». Igual que las seis tarjetas de la portada, empiezan sin destino y se
+   activan solos en cuanto les pones dirección.
+
+   Para ponerles enlace:
+
+     1) Abre «enlaces-academia.txt» con el Bloc de notas.
+     2) Pega la dirección después del signo  =  del botón que quieras.
+     3) Guarda el archivo (Ctrl+S).
+     4) Haz doble clic en «actualizar-enlaces.bat» (el mismo de siempre: ese
+        .bat actualiza los dos archivos de enlaces de una vez).
+     5) Vuelve al navegador y recarga con Ctrl+F5.
+
+   «Entrar desde la escuela» pensada para una dirección que solo funciona
+   dentro de la red del colegio; «Entrar desde la web», para una dirección
+   accesible desde cualquier lugar con internet.
+
+
+4. LA PÁGINA DE RECURSOS EDUCATIVOS DIGITALES
 -------------------------------------------------------------------------------
 
    Está en «recursos/index.html» y reúne 23 plataformas repartidas en cinco
@@ -80,13 +108,20 @@
    El archivo empieza con las instrucciones completas de cada campo.
 
 
-4. QUÉ HAY EN CADA ARCHIVO
+5. QUÉ HAY EN CADA ARCHIVO
 -------------------------------------------------------------------------------
 
    index.html ................ La página de inicio. Aquí están los textos.
    enlaces.txt ............... LOS ENLACES. Es uno de los archivos que editas.
-   actualizar-enlaces.bat .... Aplica los cambios de enlaces.txt a la página.
+   actualizar-enlaces.bat .... Aplica los cambios de enlaces.txt y
+                               enlaces-academia.txt a la página.
    enlaces.js ................ Copia automática de enlaces.txt. NO se edita.
+
+   academia-code/index.html .. La página de la Academia CODE.
+   enlaces-academia.txt ...... LOS ENLACES de sus dos botones. Se edita a mano.
+   enlaces-academia.js ....... Copia automática de enlaces-academia.txt. NO se edita.
+   js/academia.js ............ Enlaces de los botones de la Academia CODE.
+   estilos/academia.css ...... Aspecto propio de la página de la Academia CODE.
 
    recursos/index.html ....... La página de Recursos Educativos Digitales.
    js/recursos-datos.js ...... EL CATÁLOGO. El otro archivo que editas tú.
@@ -95,13 +130,13 @@
 
    estilos/base.css .......... Colores, tipografía y medidas de todo el sitio.
    estilos/componentes.css ... Cabecera, tarjetas, panel de servicios y pie.
-   js/comun.js ............... Tema claro/oscuro y menú móvil, en las dos páginas.
+   js/comun.js ............... Tema claro/oscuro y menú móvil, en todas las páginas.
    js/principal.js ........... Enlaces y navegación de la página de inicio.
    img/ ...................... Las imágenes del avatar.
    herramientas/ ............. El programa que usa el .bat. No hay que tocarlo.
 
 
-5. CAMBIOS FRECUENTES
+6. CAMBIOS FRECUENTES
 -------------------------------------------------------------------------------
 
    Cambiar un texto, un título o una descripción:
@@ -110,7 +145,12 @@
 
    Cambiar el correo o el WhatsApp:
        Busca «profejesus365» y «573003813984». Aparecen en «index.html»
-       (panel de servicios y pie) y en «recursos/index.html» (pie).
+       (panel de servicios y pie), y en el pie de «recursos/index.html» y de
+       «academia-code/index.html».
+
+   Cambiar el texto de la narrativa de la Academia CODE:
+       Abre «academia-code/index.html» con el Bloc de notas y busca el texto
+       tal cual aparece en la página. Cámbialo y guarda.
 
    Cambiar la foto del avatar:
        Reemplaza los archivos de la carpeta «img/» conservando los mismos
@@ -119,14 +159,14 @@
    Cambiar los colores:
        En «estilos/base.css», al principio, están las variables --marca
        (azul institucional) y --acento (terracota). Cambiando esos dos
-       valores cambia el color de todo el sitio, las dos páginas incluidas.
+       valores cambia el color de todo el sitio, todas las páginas incluidas.
 
    Cambiar el color de una categoría de recursos:
        En «estilos/recursos.css», al principio, cada categoría tiene su
        propio tono para el modo claro y para el oscuro.
 
 
-6. SI QUIERES PUBLICARLO EN INTERNET
+7. SI QUIERES PUBLICARLO EN INTERNET
 -------------------------------------------------------------------------------
 
    El sitio es estático: no necesita servidor ni base de datos. Sube toda la

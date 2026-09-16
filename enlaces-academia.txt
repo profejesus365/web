@@ -1,0 +1,40 @@
+# =============================================================================
+#   ENLACES DE LA ACADEMIA CODE
+#   Sitio de Mgtr. Jesús Álvarez Sáez
+# =============================================================================
+#
+#   Este archivo controla los dos botones de la página «Academia CODE»
+#   (academia-code/index.html): «Entrar desde la escuela» y «Entrar desde la
+#   web». No hace falta abrir el código.
+#
+#   CÓMO SE USA
+#   -----------
+#   1. Pega la dirección después del signo  =  del botón que corresponda.
+#   2. Guarda este archivo (Ctrl+S).
+#   3. Haz doble clic en «actualizar-enlaces.bat», en la carpeta principal del
+#      sitio.
+#   4. Vuelve al navegador y recarga la página con Ctrl+F5.
+#
+#   Mientras una línea quede vacía, ese botón aparece desactivado y no lleva a
+#   ninguna parte. En cuanto le pongas dirección, se activa solo.
+#
+#   EJEMPLOS DE DIRECCIÓN VÁLIDA
+#   ----------------------------
+#   escuela = http://192.168.1.10/academia
+#   web     = https://profejesus365.github.io/code/
+#
+#   Todas las líneas que empiezan por  #  son comentarios: no se leen.
+#   No cambies el nombre que va antes del  =  (escuela, web): así es como la
+#   página reconoce cada botón.
+#
+# =============================================================================
+
+
+# --- Entrar desde la escuela --------------------------------------------------
+# Dirección que solo funciona dentro de la red del colegio (servidor local, IP
+# interna, etc.).
+escuela = http://192.168.1.4:5050/estudiante/
+
+# --- Entrar desde la web -------------------------------------------------------
+# Dirección accesible desde cualquier lugar con internet.
+web = https://profejesus365.github.io/code/

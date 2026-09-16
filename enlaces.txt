@@ -31,8 +31,12 @@
 # =============================================================================
 
 
-# --- Portal Estudiante ---------------------------------------------------------
-portal = https://profejesus365.github.io/code/
+# --- Academia CODE ------------------------------------------------------------
+# Esta tarjeta lleva a la página de bienvenida de la Academia CODE, incluida en
+# este mismo sitio (academia-code/index.html). Los botones «Entrar desde la
+# escuela» y «Entrar desde la web» de esa página se configuran aparte, en el
+# archivo «enlaces-academia.txt».
+portal = academia-code/index.html
 
 # --- Mis proyectos -----------------------------------------------------------
 proyectos =

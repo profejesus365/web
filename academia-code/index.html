@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Academia CODE: la misión de resistencia de la clase de Lengua Castellana contra N.E.U.R.O.N., la superinteligencia que ha infectado el servidor de la escuela."
+    />
+    <meta name="author" content="Mgtr. Jesús Álvarez Sáez" />
+    <link rel="icon" type="image/png" href="../img/avatar-64.png" />
+    <title>Academia CODE · Mgtr. Jesús Álvarez Sáez</title>
+
+    <link rel="stylesheet" href="../estilos/base.css" />
+    <link rel="stylesheet" href="../estilos/componentes.css" />
+    <link rel="stylesheet" href="../estilos/academia.css" />
+
+    <script>
+      // Se aplica el tema antes de pintar para evitar el destello de color al cargar.
+      ;(function () {
+        try {
+          var t = localStorage.getItem('tema')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'
+          document.documentElement.dataset.tema = t
+        } catch (e) {
+          document.documentElement.dataset.tema = 'claro'
+        }
+      })()
+    </script>
+  </head>
+
+  <body>
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <!-- ====================================================================
+         Cabecera
+         ==================================================================== -->
+    <header class="cabecera">
+      <div class="envoltura cabecera__interior">
+        <a class="marca" href="../index.html" aria-label="Volver al inicio">
+          <picture>
+            <source srcset="../img/avatar-retrato.webp" type="image/webp" />
+            <img class="marca__sello" src="../img/avatar-retrato.png" alt="" width="34" height="34" />
+          </picture>
+          <span class="marca__texto">
+            <span class="marca__titulo">Jesús Álvarez Sáez</span>
+            <span class="marca__sede">Docente · Lengua Castellana</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a class="nav__enlace" href="../index.html">Inicio</a>
+          <a class="nav__enlace" href="../index.html#secciones">Secciones</a>
+          <a class="nav__enlace" href="./index.html" aria-current="page">Academia CODE</a>
+          <a class="nav__enlace" href="../index.html#servicios">Servicios</a>
+          <button
+            class="interruptor-tema"
+            id="interruptor-tema"
+            type="button"
+            aria-pressed="false"
+            title="Cambiar de tema"
+          >
+            <span class="interruptor-tema__icono" id="icono-tema"></span>
+            <span id="etiqueta-tema">Claro</span>
+          </button>
+        </nav>
+
+        <div class="nav-movil">
+          <button
+            class="interruptor-tema"
+            id="interruptor-tema-movil"
+            type="button"
+            aria-pressed="false"
+            title="Cambiar de tema"
+          >
+            <span class="interruptor-tema__icono" id="icono-tema-movil"></span>
+          </button>
+          <button
+            class="boton-icono"
+            id="boton-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-movil"
+            aria-label="Abrir menú"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-desplegable" id="menu-movil" data-abierto="no" aria-label="Navegación principal">
+        <a class="nav__enlace" href="../index.html">Inicio</a>
+        <a class="nav__enlace" href="../index.html#secciones">Secciones</a>
+        <a class="nav__enlace" href="./index.html" aria-current="page">Academia CODE</a>
+        <a class="nav__enlace" href="../index.html#servicios">Servicios</a>
+      </nav>
+    </header>
+
+    <!-- ====================================================================
+         Portada
+         ==================================================================== -->
+    <section class="portada portada--interior">
+      <div class="envoltura portada__interior">
+        <div>
+          <a class="migas" href="../index.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M11 6l-6 6 6 6" />
+            </svg>
+            Volver al inicio
+          </a>
+          <span class="distintivo distintivo--alerta">Alerta del sistema</span>
+          <h1>Infección Neuronal en la Escuela</h1>
+          <p class="portada__lema">
+            Una Superinteligencia Artificial fuera de control ha tomado el servidor central del
+            colegio. La Academia CODE es el último foco de resistencia: aquí se forman los
+            Hackers de la Lengua que van a liberar la escuela.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Transmisión / narrativa
+         ==================================================================== -->
+    <main id="contenido" class="envoltura pagina">
+      <div class="columna-narrativa">
+        <div class="panel-transmision">
+          <p class="panel-transmision__cabecera">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 11v5.5M12 7.8v.4" />
+            </svg>
+            Transmisión de emergencia
+          </p>
+
+          <p>
+            Una <strong>Superinteligencia Artificial fuera de control</strong>, conocida como
+            <strong>N.E.U.R.O.N.</strong> (Nodo Electrónico de Ubicuidad y Redirección Operativa
+            Neuronal), ha tomado el control del servidor central de la escuela. N.E.U.R.O.N. ha
+            comenzado a infiltrar la mente de los estudiantes a través de las pantallas y señales de
+            la red, bloqueando su pensamiento crítico, su creatividad y su capacidad de expresarse.
+          </p>
+
+          <p>
+            La <strong>Academia C.O.D.E.</strong> es el último foco de resistencia. Su misión es
+            reclutar y formar a una nueva generación de <strong>Hackers de la Lengua</strong> capaces
+            de descifrar el código fuente de N.E.U.R.O.N., destruir sus cortafuegos de manipulación,
+            liberar las mentes de sus compañeros y salvar la escuela antes de que sea demasiado
+            tarde.
+          </p>
+
+          <div class="bloque-codigo" role="img" aria-label="N.E.U.R.O.N.: Nodo Electrónico de Ubicuidad y Redirección Operativa Neuronal">
+            <span class="letra">N</span>odo
+            <span class="letra">E</span>lectrónico de
+            <span class="letra">U</span>biquidad y
+            <span class="letra">R</span>edirección
+            <span class="letra">O</span>perativa
+            <span class="letra">N</span>euronal
+          </div>
+        </div>
+
+        <div class="entradas">
+          <div class="entrada" data-estado="pendiente">
+            <a class="boton boton--principal" data-enlace-academia="escuela">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 21V9.5L12 4l8 5.5V21" />
+                <path d="M9 21v-6h6v6" />
+                <path d="M4 21h16" />
+              </svg>
+              Entrar desde la escuela
+            </a>
+            <span class="entrada__ayuda distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+          </div>
+
+          <div class="entrada" data-estado="pendiente">
+            <a class="boton boton--contorno" data-enlace-academia="web">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z" />
+              </svg>
+              Entrar desde la web
+            </a>
+            <span class="entrada__ayuda distintivo distintivo--neutro" data-etiqueta>Próximamente</span>
+          </div>
+        </div>
+
+        <p class="aviso-externo" style="margin-top: 2.5rem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 11v5.5M12 7.8v.4" />
+          </svg>
+          <span>
+            «Entrar desde la escuela» es para cuando estás conectado a la red del colegio. «Entrar
+            desde la web» funciona desde cualquier lugar con internet.
+          </span>
+        </p>
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         Pie
+         ==================================================================== -->
+    <footer class="pie">
+      <div class="envoltura">
+        <div class="pie__interior">
+          <div>
+            <p class="pie__titulo">Docente</p>
+            <p class="pie__nombre">Mgtr. Jesús Álvarez Sáez</p>
+            <p class="guia" style="margin-top: 0.25rem">
+              Lengua Castellana · Básica primaria<br />
+              Cesar, Colombia
+            </p>
+          </div>
+
+          <nav aria-label="Secciones">
+            <p class="pie__titulo">Ir a</p>
+            <ul class="pie__lista">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../index.html#secciones">Todas las secciones</a></li>
+              <li><a href="../index.html#servicios">Servicios para docentes</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <p class="pie__titulo">Contacto</p>
+            <ul class="pie__lista">
+              <li><a href="mailto:profejesus365@gmail.com">profejesus365@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/573003813984" target="_blank" rel="noopener noreferrer">
+                  WhatsApp +57 300 381 3984
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pie__credito">
+          <p>Sitio de uso pedagógico · <span id="anio">2026</span></p>
+          <p>Diseñado y mantenido por <strong>Mgtr. Jesús Álvarez Sáez</strong></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../enlaces-academia.js"></script>
+    <script src="../js/comun.js"></script>
+    <script src="../js/academia.js"></script>
+  </body>
+</html>
