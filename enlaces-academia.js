@@ -10,6 +10,6 @@
    funcionan igual sin necesidad de publicar el sitio.
    ========================================================================== */
 window.ENLACES_ACADEMIA = {
-  escuela: 'http://127.0.0.1:5050/estudiante/',
+  escuela: 'http://192.168.1.3:5050/estudiante/',
   web: 'https://profejesus365.github.io/code/',
 }
