@@ -11,7 +11,7 @@
    ========================================================================== */
 window.ENLACES = {
   portal: 'academia-code/index.html',
-  proyectos: '',
+  proyectos: 'http://192.168.1.4:4000',
   ejes: '',
   examenes: 'http://192.168.1.4:3000',
   gamificaciones: '',

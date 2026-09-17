@@ -99,7 +99,7 @@ Actualizar-Enlaces `
     -Claves @('portal', 'proyectos', 'ejes', 'examenes', 'gamificaciones', 'recursos') `
     -Rotulos @{
         portal         = 'Academia CODE'
-        proyectos      = 'Mis proyectos'
+        proyectos      = 'Social Networks'
         ejes           = 'Ejes tematicos'
         examenes       = 'Examenes'
         gamificaciones = 'Gamificacion'
