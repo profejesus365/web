@@ -20,7 +20,7 @@
 #
 #   EJEMPLOS DE DIRECCIÓN VÁLIDA
 #   ----------------------------
-#   escuela = http://192.168.1.10/academia
+#   escuela = http://192.168.1.4:5174
 #   web     = https://profejesus365.github.io/code/
 #
 #   Todas las líneas que empiezan por  #  son comentarios: no se leen.
