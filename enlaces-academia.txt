@@ -33,7 +33,7 @@
 # --- Entrar desde la escuela --------------------------------------------------
 # Dirección que solo funciona dentro de la red del colegio (servidor local, IP
 # interna, etc.).
-escuela = http://192.168.1.3:5050/estudiante/
+escuela = http://192.168.1.4:5174
 
 # --- Entrar desde la web -------------------------------------------------------
 # Dirección accesible desde cualquier lugar con internet.
